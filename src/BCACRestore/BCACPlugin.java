@@ -44,15 +44,15 @@ PluginManager pm = getServer().getPluginManager();
 		 getServer().addRecipe(maprecipe);
 		
 		 
-		 ItemStack resultdiamond = new ItemStack(Material.DIAMOND,1);
-		 ShapedRecipe diamondrecipe = new ShapedRecipe(resultdiamond);
-		 diamondrecipe.shape("AAA","AAA","BBB");
-		diamondrecipe.setIngredient('A', Material.STONE,64);
-		diamondrecipe.setIngredient('B', Material.COAL,64);
+		// ItemStack resultdiamond = new ItemStack(Material.DIAMOND,1);
+		// ShapedRecipe diamondrecipe = new ShapedRecipe(resultdiamond);
+		// diamondrecipe.shape("AAA","AAA","BBB");
+		//diamondrecipe.setIngredient('A', Material.STONE,64);
+		//diamondrecipe.setIngredient('B', Material.COAL,64);
 		 
 		
 		
-		getServer().addRecipe(diamondrecipe);
+		//getServer().addRecipe(diamondrecipe);
 		
 		ItemStack resultmoss = new ItemStack(Material.MOSSY_COBBLESTONE,1);
 		ShapedRecipe mossrecipe = new ShapedRecipe(resultmoss);
@@ -64,7 +64,16 @@ PluginManager pm = getServer().getPluginManager();
 		
 		getServer().addRecipe(mossrecipe);
 		 
-		 
+		ItemStack resultsand = new ItemStack(Material.SAND,6);
+		ShapedRecipe sandrecipe = new ShapedRecipe(resultsand);
+		
+		
+		sandrecipe.shape("AAA","ABA","AAA");
+		mossrecipe.setIngredient('A',Material.SANDSTONE);
+		sandrecipe.setIngredient('B',Material.STONE);
+		
+		getServer().addRecipe(sandrecipe);
+		  
 		 
 		
 		//pm.registerEvent(Event.Type.INVENTORY_CHANGE,mpcl, Priority.Normal, this);
